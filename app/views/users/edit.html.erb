@@ -1,0 +1,20 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-8 col-md-7">
+      <div class="text-center bg-white radius p-3 shadow">
+        <h1><strong>Welcome!</strong></h1>
+        <h2 class="mb-4">Let's see what are you interested in.</h2>
+
+        <%= image_tag "img-career.jpg", style: "max-width: 60%;"%>
+          <p class="mt-4">What do you wish to work on throughout this journey?</p>
+          <%= form_tag (/choose_career, method: 'post') do %>
+          <%= check_box_tag :image %>
+          <%= f.submit 'Add Choices', class:"btn btn-info mb-3"%>
+        <% end %>
+
+        <%= link_to 'Back', root_path, class:"btn btn-light ml-3"%>
+
+      </div>
+    </div>
+  </div>
+</div>
