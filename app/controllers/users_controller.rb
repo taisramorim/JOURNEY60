@@ -11,4 +11,10 @@ class UsersController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:title, :user_id)
+  end
 end
