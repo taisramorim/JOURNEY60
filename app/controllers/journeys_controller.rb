@@ -1,5 +1,5 @@
 class JourneysController < ApplicationController
   def index
-    @journeys = Journey.all
+    @journeys = current_user.journeys
   end
 end
