@@ -1,0 +1,32 @@
+
+.footer-container {
+  color: #F2E6F7;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer{
+  padding: 0 2rem;
+  background-color:black;
+  color: #F2E6F7;
+  bottom: 0;
+  width: 100%;
+}
+.rights {
+  text-align: center;
+}
+#footer1 {
+  order: 1;
+}
+#footer2 {
+  order: 2;
+}
+
+@media (max-width: 380px) {
+  .footer-container {
+    text-align: center;
+    justify-content: center;
+  }
+}
