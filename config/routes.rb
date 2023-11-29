@@ -12,5 +12,5 @@ Rails.application.routes.draw do
 
   resources :journeys, only: %i[index]
   resources :users, only: %i[edit update]
-
+  resources :challenges, only: %i[edit update]
 end
