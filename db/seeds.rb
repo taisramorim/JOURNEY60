@@ -31,4 +31,15 @@ User.create(
   password: 'password3'
 )
 
+users = User.all
+
+users.each do |user|
+  60.times do |i|
+    Journey.create(
+      title: "Day #{i + 1}/60",
+      user_id: user.id
+    )
+  end
+end
+
 puts 'Seed data created successfully'
