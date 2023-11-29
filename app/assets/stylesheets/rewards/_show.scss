@@ -1,0 +1,37 @@
+/* app/assets/stylesheets/rewards/_show.scss */
+/* Add specific styles for the "show" page if needed */
+.container {
+  padding-top: 30px;
+}
+
+.btn-back {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+
+.reward-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+.reward-image {
+  max-width: 50%;
+  border-radius: 50%;
+}
+
+
+.reward-name {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  color: #023e6d;
+  font-weight: bold;
+}
+
+.reward-description {
+  font-size: 1.0rem;
+  margin-top: 10px;
+  color: black;
+}
