@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :journeys, only: %i[index]
   resources :users, only: %i[edit update]
   resources :challenges, only: %i[edit update]
 end
