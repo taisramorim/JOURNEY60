@@ -12,7 +12,6 @@ Reward.destroy_all
 Journey.destroy_all
 Challenge.destroy_all
 User.destroy_all
-Reward.destroy_all
 
 User.create(
   username: 'tais',
