@@ -8,6 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+Reward.destroy_all
+Journey.destroy_all
+Challenge.destroy_all
 User.destroy_all
 
 User.create(
@@ -56,8 +59,44 @@ my_reward = Reward.create(
   name: 'first reward',
   description: 'congratulations!'
 )
+
 Challenge.create(
   description: 'Do the dishes',
+  completed: false,
+  journey: my_journey,
+  reward: my_reward
+)
+
+Challenge.create(
+  description: 'Read a book',
+  completed: false,
+  journey: my_journey,
+  reward: my_reward
+)
+
+Challenge.create(
+  description: 'Work',
+  completed: false,
+  journey: my_journey,
+  reward: my_reward
+)
+
+Challenge.create(
+  description: 'Sleep',
+  completed: false,
+  journey: my_journey,
+  reward: my_reward
+)
+
+Challenge.create(
+  description: 'Exercice',
+  completed: false,
+  journey: my_journey,
+  reward: my_reward
+)
+
+Challenge.create(
+  description: 'Study',
   completed: false,
   journey: my_journey,
   reward: my_reward

@@ -1,4 +1,4 @@
-<%= simple_form_for(@challenge) do |f| %>
-  <%= f.input :completed %>
+<%= simple_form_for(@challenge, data: { controller: "challenges" }) do |f| %>
+  <%= f.input :completed, as: :hidden, input_html: { value: true } %>
   <%= f.submit %>
 <% end %>
