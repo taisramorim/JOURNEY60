@@ -1,0 +1,23 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-8 col-md-7">
+      <div class="text-center bg-white radius p-3 shadow">
+        <h2><strong>Your challenges</strong></h2>
+        <h2 class="mb-4">Let's go!</h2>
+        <div class="challenges">
+          <% @journey.challenges.each do |challenge| %>
+            <div class="challenge">
+              <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
+            </div>
+          <% end %>
+          <div>
+          <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
+            <% if @journey.challenges.length == completed.length%>
+              <p class="reward-btn btn btn-info">Reward</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

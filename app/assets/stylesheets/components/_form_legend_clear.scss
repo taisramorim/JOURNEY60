@@ -8,3 +8,9 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.special .form-check{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}

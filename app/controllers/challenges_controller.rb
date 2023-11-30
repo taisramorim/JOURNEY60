@@ -6,7 +6,11 @@ class ChallengesController < ApplicationController
 
   def update
     if @challenge.update(challenge_params)
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to journey_path(@challenge.journey) }
+        format.json { render json: @challenge, status: :ok }
+        format.js
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -25,6 +29,6 @@ class ChallengesController < ApplicationController
   end
 
   def challenge_params
-    params.require(:challenge).permit(:completed)
+    params.require(:challenge).permit(:completed, :description)
   end
 end

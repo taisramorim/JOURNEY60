@@ -21,11 +21,10 @@
               <div class="journey-details">
                 <h3>Today's challenges!</h3>
                 <div class="journey-challenges">
-                  <p>Here will add the challenges</p>
                   <ul>
-                  <%# journey.challenges.each do |challenge| %>
-                  <%# li challenge.name %>
-                  <%# end %>
+                  <% journey.challenges.each do |challenge| %>
+                  <% li challenge.description %>
+                  <% end %>
                   </ul>
                 </div>
               </div>
