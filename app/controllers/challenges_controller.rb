@@ -1,5 +1,5 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: %i[edit update]
+  before_action :set_challenge, only: [:edit, :update, :complete]
 
   def edit
   end
@@ -14,6 +14,12 @@ class ChallengesController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def complete
+    @challenge.update(completed: true)
+    @reward = Reward.all.sample
+    redirect_to reward_path(@reward)
   end
 
   private

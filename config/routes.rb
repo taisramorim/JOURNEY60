@@ -14,4 +14,5 @@ Rails.application.routes.draw do
     resources :challenges, only: %i[edit update]
   end
   resources :users, only: %i[edit update]
+  resources :rewards, only: %i[show]
 end
