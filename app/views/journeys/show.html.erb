@@ -10,6 +10,12 @@
               <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
             </div>
           <% end %>
+          <div>
+          <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
+            <% if @journey.challenges.length == completed.length%>
+              <p class="reward-btn btn btn-info">Reward</p>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
