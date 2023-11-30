@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: system-ui;
+  background-image: url('/assets/background.jpeg');
   background-size: cover;
   background-position: right;
   background-attachment: fixed;
@@ -59,7 +60,6 @@ h1{
 
 h2{
   text-align: center;
-  color: rgb(12, 84, 12);
 }
 
 .styled-button {
