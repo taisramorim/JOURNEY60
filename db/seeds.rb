@@ -12,7 +12,8 @@ Reward.destroy_all
 Journey.destroy_all
 Challenge.destroy_all
 User.destroy_all
-Reward.destroy_all
+
+puts 'Creating seeds.'
 
 User.create(
   username: 'tais',
@@ -49,8 +50,6 @@ users.each do |user|
     )
   end
 end
-
-puts 'Seed data created successfully'
 
 my_journey = Journey.create(
   title: 'my first journey',
@@ -102,6 +101,7 @@ Challenge.create(
   completed: false,
   journey: my_journey,
   reward: my_reward
+)
 
 Reward.create(
   name: 'Rockstar Serenade',
@@ -128,3 +128,5 @@ Reward.create(
   description: "Well done! You're officially a Meme Master. Your reward includes a collection of the dankest memes."
 
 )
+
+puts 'Seed data created successfully'
