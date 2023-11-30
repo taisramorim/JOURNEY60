@@ -19,7 +19,7 @@ User.create(
   username: 'tais',
   first_name: 'Tais',
   last_name: 'Amorim',
-  email: 'tais@example.com',
+  email: 'tais@journey60.me',
   password: 'password1'
 )
 
@@ -27,7 +27,7 @@ stella_user = User.create!(
   username: 'stella',
   first_name: 'Stella',
   last_name: 'Mascaro',
-  email: 'stella@example.com',
+  email: 'stella@journey60.me',
   password: 'password2'
 )
 
@@ -36,7 +36,7 @@ User.create(
   username: 'karol',
   first_name: 'Karoline',
   last_name: 'Ferr',
-  email: 'karol@example.com',
+  email: 'karol@journey60.me',
   password: 'password3'
 )
 
@@ -105,7 +105,7 @@ Challenge.create(
 
 Reward.create(
   name: 'Rockstar Serenade',
-  description: 'Congratulations! You won a coupon for a private air guitar serenade by a rockstar, also known as: Vitão!. Enjoy 😍'
+  description: 'Congratulations! You won a coupon for a private air guitar serenade by a rockstar, also known as: Vitão! Enjoy 😍'
 )
 
 Reward.create(
@@ -126,7 +126,6 @@ Reward.create(
 Reward.create(
   name: 'Meme Master Badge',
   description: "Well done! You're officially a Meme Master. Your reward includes a collection of the dankest memes."
-
 )
 
 puts 'Seed data created successfully'

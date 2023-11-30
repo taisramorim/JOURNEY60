@@ -18,14 +18,13 @@
               </div>
             </div>
             <div class="journey-card-back">
+              <%= link_to "Bora!", journey_path(181) %>
               <div class="journey-details">
                 <h3>Today's challenges!</h3>
                 <div class="journey-challenges">
-                  <ul>
-                  <% journey.challenges.each do |challenge| %>
-                  <% li challenge.description %>
-                  <% end %>
-                  </ul>
+                  <%# journey.challenges.each do |challenge| %>
+                  <%# challenge.description %>
+                  <%# end %>
                 </div>
               </div>
             </div>
