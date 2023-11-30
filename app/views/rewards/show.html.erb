@@ -1,0 +1,22 @@
+<div class="container py-5">
+
+  <%= link_to raw('<i class="fa-solid fa-arrow-left"></i> Back to cards'), root_path, class: 'btn btn-dark rounded-1' %>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="text-center bg-white rounded-3 p-4 shadow">
+        <h2 class="mb-3"><strong>Rewards ✨</strong></h2>
+
+        <%= image_tag "rewards.jpg", class: "img-fluid rounded-circle mb-4", style: "max-width: 50%"%>
+
+        <p class="mt-4">Yay! Your daily challenge have been completed! Here is your <strong>reward</strong>:</p>
+          <div class="card mt-4 p-3">
+            <h2 class="text-center reward-name mb-4"><%= @reward.name %></h2>
+            <div class="text-center">
+              <p class="reward-description lead"><%= @reward.description %></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
