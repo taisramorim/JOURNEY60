@@ -19,12 +19,6 @@
             <% if @journey.challenges.length == completed.length%>
               <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info' %>
             <% end %>
-            <div>
-              <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
-              <% if @journey.challenges.length == completed.length%>
-                <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info mt-2' %>
-              <% end %>
-           </div>
           </div>
         </div>
       </div>
