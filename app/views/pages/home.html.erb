@@ -1,52 +1,86 @@
 <div class="background-container">
   <div class="banner">
-    <h1>JOURNEY 60</h1>
-    <p>Unleash Your Full Potential <br> Transform in 60 Days</p>
+    <h1><strong>Journey 60</strong></h1>
   </div>
 
-
-  <div class="scrollable-text">
-    <div class="card">
-      <h2>The Journey</h2>
-      <p>Journey 60 is a transformative program designed for individuals feeling trapped in their daily routines, particularly recent boot camp graduates aiming to launch their careers in the challenging field of development. The program addresses this pain point by offering participants a structured journey through six life-altering rules over 60 days. These rules encompass goal-setting, habit-building, and personal growth techniques, empowering individuals to break free from stagnation and propel their lives forward.</p>
-    </div>
-
-    <%= link_to 'Join Us!', new_user_registration_path, class: "styled-button no-underline btn-lg" %>
-
-    <div class="card">
-      <h2>Nice to meet you</h2>
-      <p>Description about the creators</p>
-    </div>
-
-    <div class="card">
-      <div class="creator-info">
-        <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435534/Karol_u3fjjy.png" alt="">
-          <div class="text">
-            <h4>Karoline Ferreira</h4>
-            <p>My name is Karoline, I'm from Brazil and I'm excited to start learning to code :)</p>
-          </div>
-        </div>
-    </div>
-
-    <div class="card">
-      <div class="creator-info">
-        <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435569/Stella_v2akbd.png" alt="">
-          <div class="text">
-            <h4>Stella Mascaro</h4>
-            <p>I struggled to find my vocation as a teenager, and recently, I shifted my studies to something related to technology, which has always fascinated me. Last year, I started studying Computer Science, and I fell in love with it right away. However, I still felt like something was missing. Then, a colleague recommended Le Wagon, which was exactly what I was looking for in my programming journey. I'm really excited and looking forward to what seems like a life-changing experience!</p>
-          </div>
+  <div class="section">
+    <div class="title-card col-sm-8 col-md-6 col-lg-4">
+      <h2>Unleash Your Full Potential <br> and transform in 60 Days</h2>
+      <%# <p>Create healthy and long-lasting habits</p> %>
+      <p>Discover Productive  your daily habit tracker app that helps you build positive habits and new routines. <br> Effortlessly track your habits, set reminders, reach your personal goals, and stay motivated every day.</p>
+      <div class="button-container">
+        <%= link_to 'Get started', new_user_registration_path, class: "get-started-button" %>
       </div>
     </div>
 
-    <div class="card">
-      <div class="creator-info">
-      <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435574/Tais_koqffd.jpg" alt="">
-        <div class="text">
-          <h4>Tais Amorim</h4>
-          <p>My unique journey began with over a decade of working on cruise ships, allowing me to travel the world and immerse myself in information technology (IT). This experience taught me the value of diversity and a mindset of continuous learning. I'm excited to apply my IT passion to future opportunities and collaborate with people from diverse backgrounds, believing that innovation arises from such diversity. I'm committed to making a meaningful contribution and continuing my journey of growth, both personally and professionally.</p>
+
+    <div class="app-features">
+      <div class="feature">
+        <h3>Best mobile site & app</h3>
+        <p>Featured by Apple and Google</p>
+      </div>
+      <div class="feature">
+        <h3>App Store rating</h3>
+        <p>3 downloads</p>
+      </div>
+      <div class="feature">
+        <h3>Habit building & management</h3>
+        <p>Easily set goals and manage your habits with our intuitive and user-friendly interface...</p>
+      </div>
+    </div>
+
+    <div class="app-features">
+      <div class="feature">
+        <h3>Statistics</h3>
+        <p>Monitor your progress with detailed analytics and visualizations with our advanced habit-tracking feature...</p>
+      </div>
+      <div class="feature">
+        <h3>Challenges</h3>
+        <p>Boost your productivity, enhance your well-being, and transform your behavior with exciting challenges!...</p>
+      </div>
+      <div class="feature">
+        <h3>Smart reminders</h3>
+        <p>Productive habit tracker app ensures you stay on top of your daily tasks with location-based and time-specific reminders...</p>
+      </div>
+    </div>
+
+    <h1><strong>Nice to meet you</strong></h1>
+
+    <div class="app-features">
+      <div class="card col-lg-4">
+        <div class="creator-info">
+          <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435534/Karol_u3fjjy.png" alt="">
+            <div class="text">
+              <h4>Karoline Ferreira</h4>
+              <p>Hi all! I'm Karoline and I'm here because I have worked in the tech industry for a few years (in the customer success area, more specifically), and ever since I've wanted to learn more about programming. I have a bachelor's degree in International Relations and lived in Colombia for 3 years, which was where I had my first job in a tech company.</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="card col-lg-4">
+        <div class="creator-info">
+          <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435569/Stella_v2akbd.png" alt="">
+            <div class="text">
+              <h4>Stella Mascaro</h4>
+              <p>I struggled to find my vocation as a teenager, and recently, I shifted my studies to something related to technology, which has always fascinated me. Last year, I started studying Computer Science, and I fell in love with it right away. However, I still felt like something was missing. Then, a colleague recommended Le Wagon, which was exactly what I was looking for in my programming journey. I'm really excited and looking forward to what seems like a life-changing experience!</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="card col-lg-3">
+        <div class="creator-info">
+        <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435574/Tais_koqffd.jpg" alt="">
+          <div class="text">
+            <h4>Tais Amorim</h4>
+            <p>My unique journey began with over a decade of working on cruise ships, allowing me to travel the world and immerse myself in information technology (IT). This experience taught me the value of diversity and a mindset of continuous learning. I'm excited to apply my IT passion to future opportunities and collaborate with people from diverse backgrounds, believing that innovation arises from such diversity. I'm committed to making a meaningful contribution and continuing my journey of growth, both personally and professionally.</p>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="footer-card">
+      <p>Build and track habits that can change your life</p>
+      <%= link_to 'Try it now', new_user_registration_path, class: "get-started-button" %>
+    </div>
   </div>
 </div>
