@@ -14,7 +14,7 @@ body {
   text-align: center;
   padding: 50px;
   position: relative;
-  color: #333; /* Dark gray text color */
+  color: #333;
 }
 
 .scrollable-text {
@@ -53,21 +53,6 @@ body {
   margin-bottom: 15px;
 }
 
-h1 {
-  font-size: 4rem;
-  color: white;
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-  color: white;
-}
-
-h3, h4, p{
-  color: white;
-}
-
 .get-started-button {
   background-color: rgb(5, 130, 30);
   color: #fff;
@@ -91,7 +76,7 @@ h3, h4, p{
   max-width: 400px;
   margin: auto;
   text-align: left;
-  background-color: #fff;
+  background-color: #f3000013;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 20px;
@@ -127,6 +112,23 @@ h3, h4, p{
 
 .section{
   padding: 40px;
+
+  &{
+    h2 {
+      text-align: center;
+      color: white;
+    }
+
+    h3, h4, p{
+      color: white;
+    }
+  }
+}
+
+h1 {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
 }
 
 .title-card {
