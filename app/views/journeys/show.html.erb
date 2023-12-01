@@ -8,14 +8,19 @@
         <h2 class="mt-2 mb-2"><strong>Daily Challenge</strong></h2>
         <div class="card mt-4 p-3 mx-auto" style="max-width: 400px; background-color: #82c4ae;">
           <h2 class="mb-4">Let's go!</h2>
-          <div class="challenges">
+          <div class="challenges" data-controller="challenges">
             <% @journey.challenges.each do |challenge| %>
               <div class="challenge">
                 <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
               </div>
+              <% end %>
+           <div>
+            <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
+            <% if @journey.challenges.length == completed.length%>
+              <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info' %>
             <% end %>
             <div>
-            <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
+              <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
               <% if @journey.challenges.length == completed.length%>
                 <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info mt-2' %>
               <% end %>
