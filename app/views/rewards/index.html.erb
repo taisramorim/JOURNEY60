@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <div class="banner text-center">
+    <h1>My Rewards</h1>
+    <p>Let's see how many rewards your hard work gave you 😎</p>
+  </div>
+</div>
+
+
+<div class="container mt-2">
+  <div class="row">
+    <% @rewards.each do |reward| %>
+      <div class="col-md-4 mb-4">
+          <div class="card h-100 radius bg-white p-3 shadow " style="width: 350px;">
+            <div style="height: 300px;">
+              <img class='reward-image' src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435551/logo_gpm6ug.png" >
+            </div>
+            <div class="content">
+              <p><strong><%= reward.name %></strong></p>
+              <p><%= reward.description %></p>
+            </div>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>

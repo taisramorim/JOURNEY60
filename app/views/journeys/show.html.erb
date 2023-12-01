@@ -7,7 +7,7 @@
       <div class="text-center bg-white radius p-3 shadow">
         <h2><strong>Your challenges</strong></h2>
         <h2 class="mb-4">Let's go!</h2>
-        <div class="challenges">
+        <div class="challenges" data-controller="challenges">
           <% @journey.challenges.each do |challenge| %>
             <div class="challenge">
               <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
