@@ -4,20 +4,22 @@
 
   <div class="row justify-content-center">
     <div class="col-8 col-md-7">
-      <div class="text-center bg-white radius p-3 shadow">
-        <h2><strong>Your challenges</strong></h2>
-        <h2 class="mb-4">Let's go!</h2>
-        <div class="challenges">
-          <% @journey.challenges.each do |challenge| %>
-            <div class="challenge">
-              <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
-            </div>
-          <% end %>
-          <div>
-          <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
-            <% if @journey.challenges.length == completed.length%>
-              <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info' %>
+      <div class="text-center bg-white rounded-5 radius p-3 shadow">
+        <h2 class="mt-2 mb-2"><strong>Daily Challenge</strong></h2>
+        <div class="card mt-4 p-3 mx-auto" style="max-width: 400px; background-color: #82c4ae;">
+          <h2 class="mb-4">Let's go!</h2>
+          <div class="challenges">
+            <% @journey.challenges.each do |challenge| %>
+              <div class="challenge">
+                <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
+              </div>
             <% end %>
+            <div>
+            <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
+              <% if @journey.challenges.length == completed.length%>
+                <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info mt-2' %>
+              <% end %>
+           </div>
           </div>
         </div>
       </div>
