@@ -4,42 +4,65 @@
   </div>
 
   <div class="section">
-    <div class="title-card col-sm-8 col-md-6 col-lg-4">
+    <div class="title-card col-sm-8 col-md-6 col-lg-4 mx-auto">
       <h2>Unleash Your Full Potential <br> and transform in 60 Days</h2>
       <%# <p>Create healthy and long-lasting habits</p> %>
       <p>Discover Productive  your daily habit tracker app that helps you build positive habits and new routines. <br> Effortlessly track your habits, set reminders, reach your personal goals, and stay motivated every day.</p>
-      <div class="button-container">
-        <%= link_to 'Get started', new_user_registration_path, class: "get-started-button" %>
+      <div class="button-container mt-4">
+        <%= link_to 'Get started', journeys_path, class: "get-started-button" %>
       </div>
     </div>
 
 
     <div class="app-features">
-      <div class="feature">
+      <div class="feature card col-lg-3 col-md-6 col-sm-8">
         <h3>Best mobile site & app</h3>
+        <div class="m-3">
+          <i class="fa-solid fa-mobile" style="color: #ffffff; font-size: 3rem;"></i>
+        </div>
         <p>Featured by Apple and Google</p>
       </div>
-      <div class="feature">
+      <div class="feature card col-lg-4 col-md-6 col-sm-8">
         <h3>App Store rating</h3>
+        <div class="m-3">
+          <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-star-half-stroke" style="color: #ffffff;"></i>
+
+        </div>
         <p>3 downloads</p>
       </div>
-      <div class="feature">
+      <div class="feature card col-lg-4 col-md-6 col-sm-8">
         <h3>Habit building & management</h3>
+        <div class="m-3">
+          <i class="fa-solid fa-list-check" style="color: #ffffff; font-size: 3rem;"></i>
+        </div>
         <p>Easily set goals and manage your habits with our intuitive and user-friendly interface...</p>
       </div>
     </div>
 
     <div class="app-features">
-      <div class="feature">
+      <div class="feature card">
         <h3>Statistics</h3>
+        <div class="m-3">
+          <i class="fa-solid fa-chart-line" style="color: #ffffff; font-size: 3rem;"></i>
+        </div>
         <p>Monitor your progress with detailed analytics and visualizations with our advanced habit-tracking feature...</p>
       </div>
-      <div class="feature">
+      <div class="feature card">
         <h3>Challenges</h3>
+        <div class="m-3">
+          <i class="fa-solid fa-ranking-star" style="color: #ffffff; font-size: 3rem;"></i>
+        </div>
         <p>Boost your productivity, enhance your well-being, and transform your behavior with exciting challenges!...</p>
       </div>
-      <div class="feature">
+      <div class="feature card">
         <h3>Smart reminders</h3>
+        <div class="m-3">
+          <i class="fa-solid fa-bell" style="color: #ffffff; font-size: 3rem;"></i>
+        </div>
         <p>Productive habit tracker app ensures you stay on top of your daily tasks with location-based and time-specific reminders...</p>
       </div>
     </div>
@@ -47,7 +70,7 @@
     <h1><strong>Nice to meet you</strong></h1>
 
     <div class="app-features">
-      <div class="card col-lg-4">
+      <div class="card col-lg-3 col-md-6">
         <div class="creator-info">
           <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435534/Karol_u3fjjy.png" alt="">
             <div class="text">
@@ -57,7 +80,7 @@
           </div>
       </div>
 
-      <div class="card col-lg-4">
+      <div class="card col-lg-3 col-md-6">
         <div class="creator-info">
           <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435569/Stella_v2akbd.png" alt="">
             <div class="text">
@@ -67,7 +90,7 @@
         </div>
       </div>
 
-      <div class="card col-lg-3">
+      <div class="card col-lg-3 col-md-6">
         <div class="creator-info">
         <img src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435574/Tais_koqffd.jpg" alt="">
           <div class="text">
@@ -78,9 +101,9 @@
       </div>
     </div>
 
-    <div class="footer-card">
-      <p>Build and track habits that can change your life</p>
-      <%= link_to 'Try it now', new_user_registration_path, class: "get-started-button" %>
+    <div class="footer-card m-5 card col-lg-4 col-md-6 col-sm-8 mx-auto">
+      <h4 class="mb-4">Build and track habits that can change your life</h4>
+      <%= link_to 'Try it now', journeys_path, class: "get-started-button" %>
     </div>
   </div>
 </div>
