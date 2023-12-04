@@ -1,6 +1,7 @@
 <div class="container">
+  <%= link_to raw('<i class="fa-solid fa-arrow-left"></i> Back to Home'), root_path, class: 'btn btn-dark rounded-1' %>
   <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-6 card">
       <h2 class="text-center">Log in</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -16,7 +17,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "btn btn-primary" %>
+          <%= f.button :submit, "Log in", class: "btn btn-outline-primary" %>
         </div>
       <% end %>
 
