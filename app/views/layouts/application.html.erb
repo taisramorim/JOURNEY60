@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" unless controller_name == "pages" || controller_name = "registrations"%>
+    <%= navbar %>
     <%= render "shared/flashes" %>
     <%= yield %>
-    <%= render "shared/footer" if controller_name == "pages" || controller_name = "registrations" %>
+    <%= footer%>
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
   </body>
 </html>
