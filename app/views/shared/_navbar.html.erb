@@ -15,7 +15,7 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435508/girl_d1ujvy.jpg", class: "avatar", alt: "dropdown menu" %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Dashboard", journeys_path, class: "dropdown-item" %>

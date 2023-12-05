@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   has_many :journeys
   has_one :profile
-  after_validation :generate_journeys , if: :will_save_change_to_career?
+  has_one_attached :photo
+  after_validation :generate_journeys, if: :will_save_change_to_career?
 
   def generate_journeys
     60.times do |i|

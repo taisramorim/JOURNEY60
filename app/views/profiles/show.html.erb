@@ -1,13 +1,13 @@
 <div class="container">
  <%= link_to 'Back', journeys_path, class: "btn btn-light rounded"%>
-  <div class="card text-white">
-    <h2>Your profile</h2>
-    <p><strong>Name:</strong> <%= "#{current_user.first_name} #{current_user.last_name}" %> </p>
+  <div class="card text-white col-lg-8 col-md-7 col-sm-4">
+    <h2><%= "#{current_user.first_name} #{current_user.last_name}" %></h2>
+    <div class="my-3 mx-auto">
+      <%= cl_image_tag @user.photo.key, class: "avatar-large"  %>
+    </div>
     <p><strong>Username:</strong> <%= "#{current_user.username}" %> </p>
     <p><strong>Email:</strong> <%= "#{current_user.email}" %> </p>
     <p><strong>Career:</strong> <%= "#{current_user.career}" %> </p>
-    <p><strong>Image:</strong> <%= "#{current_user.image}" %> </p>
-
-    <%= link_to 'Edit Profile', edit_profile_path %>
+    <%= link_to 'Edit Profile', edit_profile_path, class: "btn btn-outline-light btn-sm mx-auto d-block mt-3" %>
   </div>
 </div>

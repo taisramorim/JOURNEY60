@@ -1,8 +1,9 @@
+
 <div class="container">
+<%= link_to 'Back', profile_path, class: "btn btn-light rounded"%>
   <div class="card">
     <h2>Edit profile</h2>
 
     <%= render 'form', user: @user %>
-    <%= link_to 'Back', profile_path %>
   </div>
 </div>
