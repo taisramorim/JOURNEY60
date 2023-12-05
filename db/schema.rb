@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_28_144333) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_05_150618) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "challenges", force: :cascade do |t|
     t.text "description"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.bigint "journey_id", null: false
-    t.bigint "reward_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["journey_id"], name: "index_challenges_on_journey_id"
-    t.index ["reward_id"], name: "index_challenges_on_reward_id"
   end
 
   create_table "journeys", force: :cascade do |t|
@@ -30,6 +28,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_144333) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "reward_id", null: false
+    t.index ["reward_id"], name: "index_journeys_on_reward_id"
     t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
@@ -51,13 +51,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_144333) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.string "image"
     t.string "career"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "challenges", "journeys"
-  add_foreign_key "challenges", "rewards"
+  add_foreign_key "journeys", "rewards"
   add_foreign_key "journeys", "users"
 end
