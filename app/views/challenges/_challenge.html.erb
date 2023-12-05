@@ -1,7 +1,7 @@
 <div class="challenge">
-  <p class="challenge-description-<%= challenge.id %>"><%= challenge.description %></p>
   <%= form_for [journey, challenge], remote: true, authenticity_token: true, html: { class: 'challenge-form' } do |f| %>
     <%= f.check_box :completed, onchange: 'this.form.submit();', disabled: challenge.completed?, id:"checkboxes" %>
     <%= f.hidden_field :completed, value: true %>
   <% end %>
+    <p class="challenge-description-<%= challenge.id %>"><%= challenge.description %></p>
 </div>
