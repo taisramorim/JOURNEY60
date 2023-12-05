@@ -34,10 +34,6 @@ body {
   transition: transform 0.3s;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
 .creator-info {
   display: flex;
   flex-direction: column;
