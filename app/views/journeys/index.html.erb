@@ -8,34 +8,33 @@
 <div class="container">
   <div class="row">
     <% @journeys.each do |journey| %>
-      <div class="modal fade" id="journeyModal" tabindex="-1" aria-labelledby="exampleModalJourney" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content" style="padding: 20px;">
-            <div class="modal-header text-center">
-              <h4 class="modal-title" id="exampleModalJourney"><strong>Daily Challenges</strong></h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="<%= dom_id(journey) %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="model-header d-flex justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <h2 class="text-bg-success">Let's go!</strong></h2>
+            <%= journey.title %>
+          <div class="challenges" data-controller="challenges">
+            <% journey.challenges.each do |challenge| %>
+            <div class="challenge">
+              <%= render partial: 'challenges/challenge', locals: { journey: journey, challenge: challenge } %>
             </div>
-
-            <div class="modal-body text-center">
-              <h2 class="mb-4">Let's go!</h2>
-              <%= journey.title %>
-              <div class="challenges" data-controller="challenges">
-                <% journey.challenges.each do |challenge| %>
-                <div class="challenge">
-                  <%= render partial: 'challenges/challenge', locals: { journey: journey, challenge: challenge } %>
-                </div>
-                <% end %>
-                <div>
-                  <% completed = journey.challenges.select { |challenge| challenge.completed == true } %>
-                  <% if journey.challenges.length == completed.length%>
-                    <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info mt-4' %>
-                  <% end %>
-                </div>
-              </div>
+            <% end %>
+            <div>
+              <% completed = journey.challenges.select { |challenge| challenge.completed == true } %>
+              <% if journey.challenges.length == completed.length%>
+                <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-success rounded mt-4' %>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
       <div class="col-6 col-md-4 col-lg-2">
         <div class="journey-card">
           <div class="journey-card-inner">
@@ -46,16 +45,10 @@
               </div>
             </div>
             <div class="journey-card-back">
-              <%= link_to "Bora!", journey_path(181) %>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#journeyModal">
-                Launch Journey modal
-              </button>
               <div class="journey-details">
-                <h3>Today's challenges!</h3>
+                <h3 class= "mb-3">Today's challenges</h3>
                 <div class="journey-challenges">
-                  <%# journey.challenges.each do |challenge| %>
-                  <%# challenge.description %>
-                  <%# end %>
+                  <button type="button" class="btn btn-warning btn-lg rounded-1 mt-4" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">Start!</button>
                 </div>
               </div>
             </div>
