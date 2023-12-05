@@ -9,23 +9,39 @@
 <div class="container mt-2 ">
   <div class="row">
     <% @rewards.each do |reward| %>
-      <div class="col-6 col-md-4 col-lg-2">
-          <div class="journey-card">
-           <div class="journey-card-inner">
-            <div class="journey-card-front">
-              <img class='journey-image' src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435551/logo_gpm6ug.png" >
-              <div class="journey-card-title">
-                <%= reward.name %>
-              </div>
-            </div>
-            <div class="journey-card-back">
-              <div class="journey-details">
-                <%= reward.description %>
-              </div>
-            </div>
+    <!-- Modal -->
+    <div class="modal fade" id="<%= dom_id(reward) %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body mt-3 mb-3">
+            <%= reward.description %>
           </div>
+          <div class="modal-footer">
+            <p class="fs-5 mb-3"></p>
+          </div>
+        </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="journey-card">
+          <div class="journey-card-inner">
+          <div class="journey-card-front">
+            <img class='journey-image' src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435551/logo_gpm6ug.png" >
+            <div class="journey-card-title">
+              <%= reward.name %>
+            </div>
+          </div>
+          <div class="journey-card-back">
+            <button type="button" class="btn btn-warning rounded-2" data-bs-toggle="modal" data-bs-target="#<%= dom_id(reward) %>">Open</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 </div>
