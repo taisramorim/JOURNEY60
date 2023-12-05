@@ -26,7 +26,7 @@
 }
 
 .journey-card-front{
-  background-color: rgb(233, 232, 232);
+  background-color: rgb(236, 221, 221);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@
 }
 
 .journey-card-back{
-  background-color: white;
+  background-color: rgb(236, 221, 221);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -46,6 +46,11 @@
 
 .journey-details{
   text-align: center;
+  background-color: #5aaf8b;
+  padding: 30px 40px;
+  border-radius: 15px;
+  color: #f1e6e6;
+  font-weight: 500;
 }
 
 .journey-challenges{
@@ -76,8 +81,8 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
+  background-color: #933bc9;
+  color: rgb(255, 251, 251);
   padding: 5px 10px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -88,4 +93,31 @@
     margin: auto;
     width: auto;
   }
+}
+
+.btn {
+  display: inline-block;
+  background-color: #7e609a;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #c0b1cf;
+  color: #ffffff;
+}
+
+.count-reward {
+  background-color: #5aaf8b;
+  padding: 30px 40px;
+  border-radius: 15px;
+  color: #f1e6e6;
+  font-weight: 500;
 }
