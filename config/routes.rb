@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
   resources :users, only: %i[edit update]
   resources :rewards, only: %i[show index]
+  resources :profiles, only: %i[show edit update]
 end

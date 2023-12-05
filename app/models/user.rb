@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :journeys
+  has_one :profile
   after_validation :generate_journeys , if: :will_save_change_to_career?
 
   def generate_journeys

@@ -1,0 +1,13 @@
+<div class="container">
+ <%= link_to 'Back', journeys_path, class: "btn btn-light rounded"%>
+  <div class="card">
+    <h2>Your profile</h2>
+    <p><strong>Name:</strong> <%= "#{current_user.first_name} #{current_user.last_name}" %> </p>
+    <p><strong>Username:</strong> <%= "#{current_user.username}" %> </p>
+    <p><strong>Email:</strong> <%= "#{current_user.email}" %> </p>
+    <p><strong>Career:</strong> <%= "#{current_user.career}" %> </p>
+    <p><strong>Image:</strong> <%= "#{current_user.image}" %> </p>
+
+    <%= link_to 'Edit Profile', edit_profile_path %>
+  </div>
+</div>
