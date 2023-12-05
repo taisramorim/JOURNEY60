@@ -460,7 +460,7 @@ users.each do |user|
       reward: reward
     )
 
-  puts "creating fix challenges"
+    puts "creating fix challenges"
 
     Challenge.create!(
       description: mental_health.sample,
@@ -486,22 +486,23 @@ users.each do |user|
     user_options.each do |option|
       if option =="Front-End Development"
         Challenge.create!(
-          description: frontend.sample,
+          description: frontend[i],
           journey: journey
         )
       elsif option == "Back-end Development"
         Challenge.create!(
-          description: backend.sample,
+          description: backend[i],
           journey: journey
         )
       elsif option == "Data Science"
-        Challenge.create!(
-          description: data_science.sample,
+        challenge = Challenge.create!(
+          description: data_science[i],
           journey: journey
         )
+        p challenge
       elsif option == "Data Analyst"
         Challenge.create!(
-          description: data_analyst.sample,
+          description: data_analyst[i],
           journey: journey
         )
       end
