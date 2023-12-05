@@ -7,14 +7,14 @@ class User < ApplicationRecord
   has_many :journeys
   has_one :profile
   has_one_attached :photo
-  after_validation :generate_journeys, if: :will_save_change_to_career?
+  # after_validation :generate_journeys, if: :will_save_change_to_career?
 
-  def generate_journeys
-    60.times do |i|
-      Journey.create(
-        title: "Day #{i + 1}/60",
-        user: self
-      )
-    end
-  end
+  # def generate_journeys
+  #   60.times do |i|
+  #     Journey.create(
+  #       title: "Day #{i + 1}/60",
+  #       user: self
+  #     )
+  #   end
+  # end
 end

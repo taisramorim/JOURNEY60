@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.career = params[:user][:career].compact_blank # isso eh uma ARRAY
+    @user.career = params[:user][:career].compact_blank.join(", ") # isso eh uma ARRAY
     if @user.update(user_params)
       redirect_to journeys_path, notice: 'Your career path has been added!'
     else
