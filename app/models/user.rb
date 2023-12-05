@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :journeys
-  after_validation :generate_journeys , if: :will_save_change_to_career?
+  has_one :profile
+  has_one_attached :photo
+  after_validation :generate_journeys, if: :will_save_change_to_career?
 
   def generate_journeys
     60.times do |i|
