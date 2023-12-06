@@ -18,7 +18,7 @@
           <div class="modal-body text-center">
             <h2 class="text-bg-info ">Let's go!</strong></h2>
             <%= journey.title %>
-          <div class="challenges" data-controller="challenges">
+          <div class="challenges text-right" data-controller="challenges">
             <% journey.challenges.each do |challenge| %>
             <div class="challenge">
               <%= render partial: 'challenges/challenge', locals: { journey: journey, challenge: challenge } %>

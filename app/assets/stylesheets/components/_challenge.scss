@@ -1,9 +1,12 @@
 .challenge {
   display: flex;
   gap: 25px;
-  justify-content: start;
+  width: 100%;
   background-color: #f4f4f4;
 }
 .card-border{
   border-radius: 8px;
+}
+.challenges {
+  text-align: left;
 }
