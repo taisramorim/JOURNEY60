@@ -147,6 +147,9 @@ frontend = [
   "Mobile App Development with React Native or Flutter",
   "Optimizing for Performance in Large-Scale Applications"
 ]
+puts"##############################"
+puts frontend.length
+puts"##############################"
 
 backend = [
   "Introduction to Server-side Programming Languages (e.g., Node.js, Python, Ruby)",
@@ -187,6 +190,8 @@ backend = [
   "Introduction to Web Animation Libraries (e.g., GreenSock)",
   "Introduction to React Basics",
   "Understanding React Components and Props",
+  "Server-side Rendering (SSR) and Client-side Rendering (CSR)",
+  "GraphQL Server Implementation",
   "Introduction to React State and Lifecycle",
   "Introduction to React Hooks",
   "Introduction to React Router",
@@ -204,9 +209,13 @@ backend = [
   "Introduction to WebAssembly (Wasm)",
   "Introduction to GraphQL Basics",
   "API Documentation Fundamentals",
+  "Advanced Database Concepts (e.g., Database Indexing, Transactions, Query Optimization)",
   "Introduction to Web Design Principles",
   "Introduction to CI/CD (Continuous Integration and Continuous Deployment)"
 ]
+puts"#######backend###############"
+puts backend.length
+puts"##############################"
 
 data_science = [
   "Statistical Analysis Basics",
@@ -220,7 +229,6 @@ data_science = [
   "Introduction to Linear Regression",
   "Introduction to Logistic Regression",
   "Introduction to Decision Trees",
-  "Introduction to Random Forest",
   "Introduction to Gradient Boosting",
   "Introduction to Clustering Algorithms (e.g., K-Means, Hierarchical)",
   "Principal Component Analysis (PCA) Basics",
@@ -243,7 +251,6 @@ data_science = [
   "Introduction to Model Evaluation Metrics",
   "Understanding Bias and Fairness in Machine Learning",
   "Basics of Explainable AI",
-  "Introduction to Optimization Algorithms",
   "Introduction to Big Data Technologies (e.g., Hadoop, Spark)",
   "Basics of Data Warehousing",
   "SQL for Data Science Basics",
@@ -263,19 +270,19 @@ data_science = [
   "Understanding Time Complexity and Space Complexity",
   "Optimal Algorithm Design Basics",
   "Introduction to Bayesian Statistics",
-  "Basics of Monte Carlo Simulations",
   "Introduction to Network Analysis",
   "Introduction to Deep Reinforcement Learning",
-  "Introduction to Transfer Learning",
   "Basics of Optical Character Recognition (OCR)",
   "Introduction to Automated Machine Learning (AutoML)",
-  "Basics of Quantum Computing",
   "Introduction to Data Science in Cloud Platforms (e.g., AWS, Azure)",
   "Introduction to Graph Databases and Analysis",
   "Basics of Data Privacy and Security",
-  "Introduction to Streaming Data Analytics",
   "Understanding Bias-Variance Tradeoff"
 ]
+puts"##############################"
+puts data_science.length
+puts"##############################"
+
 
 data_analyst = [
   "Data Exploration Basics",
@@ -339,6 +346,9 @@ data_analyst = [
   "Data Mining Concepts Basics",
   "Machine Learning Model Interpretability Basics"
 ]
+puts"##############################"
+puts data_analyst.length
+puts"##############################"
 
 rewards = [
   { name: "Rockstar Serenade", description: "Congratulations! You won a coupon for a private air guitar serenade by a rockstar, also known as: Vitão! Enjoy 😍"},
@@ -460,7 +470,7 @@ users.each do |user|
       reward: reward
     )
 
-  puts "creating fix challenges"
+    puts "creating fix challenges"
 
     Challenge.create!(
       description: mental_health.sample,
@@ -486,22 +496,23 @@ users.each do |user|
     user_options.each do |option|
       if option =="Front-End Development"
         Challenge.create!(
-          description: frontend.sample,
+          description: frontend[i],
           journey: journey
         )
       elsif option == "Back-end Development"
         Challenge.create!(
-          description: backend.sample,
+          description: backend[i],
           journey: journey
         )
       elsif option == "Data Science"
-        Challenge.create!(
-          description: data_science.sample,
+        challenge = Challenge.create!(
+          description: data_science[i],
           journey: journey
         )
+        p challenge
       elsif option == "Data Analyst"
         Challenge.create!(
-          description: data_analyst.sample,
+          description: data_analyst[i],
           journey: journey
         )
       end
