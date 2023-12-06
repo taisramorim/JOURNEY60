@@ -1,6 +1,5 @@
 
 <div class="challenge" data-controller="challenges" data-challenges-journey-id-value="<%= challenge.journey.id %>" data-challenge-id="<%= challenge.id %>" data-challenges-target="card">
-
   <%= form_for [journey, challenge], remote: true, authenticity_token: true, html: { class: 'challenge-form', data: {action: 'ajax-success->challengeSuccess', challenges_target: 'form'} } do |f| %>
     <%= f.check_box :completed, data: { action: 'change->challenges#submit', challenges_target: 'checkbox' }, class: "journey_#{challenge.journey.id}", disabled: challenge.completed?%>
     <%= f.hidden_field :completed, value: true %>
