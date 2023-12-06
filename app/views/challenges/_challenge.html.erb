@@ -1,7 +1,18 @@
-<div class="challenge">
-  <%= form_for [journey, challenge], remote: true, authenticity_token: true, html: { class: 'challenge-form' } do |f| %>
-    <%= f.check_box :completed, onchange: 'this.form.submit();', disabled: challenge.completed?, id:"checkboxes" %>
+
+<div class="challenge" data-controller="challenges" data-challenges-journey-id-value="<%= challenge.journey.id %>" data-challenge-id="<%= challenge.id %>" data-challenges-target="card">
+  <p class="challenge-description-<%= challenge.id %>"><%= challenge.description %></p>
+  <%= form_for [journey, challenge], remote: true, authenticity_token: true, html: { class: 'challenge-form', data: {action: 'ajax-success->challengeSuccess', challenges_target: 'form'} } do |f| %>
+    <%= f.check_box :completed, data: { action: 'change->challenges#submit', challenges_target: 'checkbox' }, class: "journey_#{challenge.journey.id}", disabled: challenge.completed?%>
     <%= f.hidden_field :completed, value: true %>
   <% end %>
     <p class="challenge-description-<%= challenge.id %>"><%= challenge.description %></p>
 </div>
+
+<%# data-action no lugar de onchange %>
+<%# chamaar funcao no stimulus %>
+<%# chamar o fetch %>
+<%# challenge controller   respond_to do |format|
+    format.html { redirect_to movies_path }
+<%# format.text { render partial: "movies/movie_infos", locals: {movie: @movie}, formats: [:html] } %>
+<%# ao inves de movie_info renderizar a partial do challenge %>
+<%#  %>

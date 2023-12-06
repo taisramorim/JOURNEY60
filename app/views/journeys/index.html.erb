@@ -16,9 +16,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <h2 class="text-bg-info ">Let's go!</strong></h2>
-            <%= journey.title %>
-          <div class="challenges text-right" data-controller="challenges">
+            <h2><%= journey.title %></h2>
+          <div class="challenges">
             <% journey.challenges.each do |challenge| %>
             <div class="challenge">
               <%= render partial: 'challenges/challenge', locals: { journey: journey, challenge: challenge } %>
@@ -26,9 +25,7 @@
             <% end %>
             <div>
               <% completed = journey.challenges.select { |challenge| challenge.completed == true } %>
-              <% if journey.challenges.length == completed.length%>
-                <%= link_to 'Reward', reward_path(journey.reward), class: 'reward-btn btn btn-success rounded mt-4' %>
-              <% end %>
+              <%= link_to 'Reward', reward_path(journey.reward), class: "reward-btn btn btn-success mt-4 reward_journey_#{ journey.id } #{ 'd-none' unless journey.challenges.length == completed.length }" %>
             </div>
           </div>
         </div>
@@ -46,9 +43,9 @@
             </div>
             <div class="journey-card-back">
               <div class="journey-details">
-                <h3 class= "mb-3">Today's challenges</h3>
+                <h4 class= "card-another mb-3 mt-4 fs-5">Today's challenges</h4>
                 <div class="journey-challenges">
-                  <button type="button" class="button-border btn btn-info btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">Start!</button>
+                  <button type="button" class="btn mt-6" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">Start</button>
                 </div>
               </div>
             </div>
