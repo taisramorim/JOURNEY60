@@ -12,11 +12,11 @@
     <div class="modal fade" id="<%= dom_id(journey) %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content card-border">
-          <div class="model-header d-flex justify-content-end">
+          <div class="model-header d-flex justify-content-end mt-3 mx-3">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <h2><%= journey.title %></h2>
+            <h2 class="mb-3"><%= journey.title %></h2>
           <div class="challenges">
             <% journey.challenges.each do |challenge| %>
             <div class="challenge">
