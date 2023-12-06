@@ -28,7 +28,9 @@ export default class extends Controller {
 
     if (checkboxes.length === checked.length) {
       const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti();
+      jsConfetti.addConfetti({
+        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+      });
       const reward = document.querySelector(`.reward_journey_${this.journeyIdValue}`);
       reward.classList.remove("d-none");
 
