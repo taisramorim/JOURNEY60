@@ -7,8 +7,8 @@ class ChallengesController < ApplicationController
   def update
     if @challenge.update(challenge_params)
       respond_to do |format|
-        format.html { redirect_to journey_path(@challenge.journey) }
-        format.json { render json: @challenge, status: :ok }
+        format.html { redirect_to journeys_path }
+        format.text { render partial: "challenges/challenge", locals: { journey: @challenge.journey, challenge: @challenge }, formats: [:html] }
         format.js
       end
     else

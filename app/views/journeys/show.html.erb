@@ -1,31 +1,16 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#journeyModal">
-  Launch Journey modal
-</button>
-
-  <div class="modal fade" id="journeyModal" tabindex="-1" aria-labelledby="exampleModalJourney" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="padding: 20px;">
-        <div class="modal-header text-center">
-          <h4 class="modal-title" id="exampleModalJourney"><strong>Daily Challenges</strong></h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-body text-center">
-          <h2 class="mb-4">Let's go!</h2>
-          <div class="challenges" data-controller="challenges">
-            <% @journey.challenges.each do |challenge| %>
-            <div class="challenge">
-              <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
-            </div>
-            <% end %>
-            <div>
-              <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
-              <% if @journey.challenges.length == completed.length%>
-                <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info mt-4' %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="card text-white mx-auto col-lg-4 col-md-6 col-sm-4">
+  <h2 class="mb-4"><strong>Let's go!</strong></h2>
+  <div class="challenges" data-controller="challenges">
+    <% @journey.challenges.each do |challenge| %>
+    <div class="challenge">
+      <%= render partial: 'challenges/challenge', locals: { journey: @journey, challenge: challenge } %>
+    </div>
+    <% end %>
+    <div class="mx-auto">
+      <% completed = @journey.challenges.select { |challenge| challenge.completed == true } %>
+      <% if @journey.challenges.length == completed.length%>
+        <%= link_to 'Reward', reward_path(3), class: 'reward-btn btn btn-info mt-4' %>
+      <% end %>
     </div>
   </div>
+</div>
