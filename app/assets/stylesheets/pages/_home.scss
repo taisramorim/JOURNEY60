@@ -143,3 +143,20 @@ h1 {
 .footer-card{
   text-align: center;
 }
+
+@media(max-width: 425px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 325px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+}
