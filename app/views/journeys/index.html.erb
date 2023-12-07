@@ -35,8 +35,13 @@
       <div class="col-6 col-md-4 col-lg-2">
         <div class="journey-card">
           <div class="journey-card-inner">
-            <div class="journey-card-front">
-              <img class='journey-image' src="https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435551/logo_gpm6ug.png" >
+            <div class="journey-card-front <%= 'completed-card' if journey.challenges.length == completed.length %>" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">
+              <% if journey.challenges.length == completed.length %>
+                <div class="completed-status">
+                  <p class="mb-0 fs-5 text-center">Completed</p>
+                </div>
+              <% end %>
+              <div class="journey-image <%=journey.challenges.length == completed.length ? "background-image-card-linear" : "background-image-card" %>"> </div>
               <div class="journey-card-title">
                 <%= journey.title %>
               </div>
@@ -62,7 +67,7 @@
 
     cards.forEach(function (card) {
       card.addEventListener("click", function () {
-        card.classList.toggle("is-flipped");
+          card.classList.toggle("is-flipped");
       });
     });
   });
