@@ -1,5 +1,5 @@
 <div class="container">
-  <%= link_to raw('<i class="fa-solid fa-arrow-left"></i> Back to Home'), root_path, class: 'btn btn-dark rounded-1' %>
+  <%= link_to raw('<i class="fa-solid fa-arrow-left"></i> Back to Home'), root_path, class: 'back-btn' %>
   <div class="row justify-content-center">
     <div class="col-md-6 card">
       <h2 class="text-center">Log in</h2>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "btn btn-outline-primary" %>
+          <%= f.button :submit, "Log in", class: "btn mb-4" %>
         </div>
       <% end %>
 

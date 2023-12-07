@@ -1,24 +1,11 @@
-
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel"><strong>Welcome!</strong></h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body justify-content-center">
-        <h3 class="mb-4 text-center">Let's see what are you interested in.</h3>
-        <%= image_tag "https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435525/img-career_qkhpkc.jpg", class: "img-fluid rounded-circle mb-4 mx-auto d-block", style: "max-width: 50%"%>
-        <p class="mt-4 fs-5 text-center mb-4">What do you wish to work on throughout this journey?</p>
-        <%= simple_form_for @user do |form| %>
-          <%= form.input :career, as: :check_boxes, collection: ['Front-End Development', 'Back-end Development', 'Data Science', 'Data Analyst'], label: " " %>
-          <%= form.submit "Create", class:"btn btn-dark mt-5 rounded" %>
-        <% end %>
-      </div>
-    </div>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <h3 class="mb-4 text-center">Let's see what are you interested in.</h3>
+    <%= image_tag "https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435525/img-career_qkhpkc.jpg", class: "img-fluid rounded-circle mb-4 mx-auto d-block", style: "max-width: 50%"%>
+    <p class="mt-4 fs-5 text-center mb-4">What do you wish to work on throughout this journey?</p>
+    <%= simple_form_for @user do |form| %>
+      <%= form.input :career, as: :check_boxes, collection: ['Front-End Development', 'Back-end Development', 'Data Science', 'Data Analyst'], label: " " %>
+      <%= form.submit "Create", class:"btn btn-dark mt-5 rounded" %>
+    <% end %>
   </div>
 </div>
