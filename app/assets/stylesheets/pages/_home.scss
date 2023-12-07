@@ -28,7 +28,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin: 15px;
-  background-color: #f7f1e4;
+  background-color: #49547A;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
@@ -50,7 +50,7 @@ body {
 
 .get-started-button {
   display: inline-block;
-  background-color: #D3615D;
+  background-color: #FFA74D;
   color: #ffffff;
   padding: 10px 50px;
   font-size: 20px;
@@ -63,7 +63,7 @@ body {
 }
 
 .get-started-button:hover {
-  background-color: #761f1a;
+  background-color: #e7c19b;
   text-decoration: none;
   color: white;
 }
@@ -126,6 +126,24 @@ h1 {
   font-size: 5rem;
   color: aliceblue;
   text-align: center;
+}
+
+.second-title {
+  color: white;
+  font-size: 25px;
+  padding: 5px 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.title-card-one {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  align-items: start;
 }
 
 .title-card {
