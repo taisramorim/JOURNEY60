@@ -94,7 +94,6 @@
 }
 
 .btn {
-  display: inline-block;
   background-color: #49547A;
   color: #ffffff;
   padding: 15px 35px;
@@ -118,4 +117,23 @@
   border-radius: 15px;
   color: #f1e6e6;
   font-weight: 500;
+}
+
+.back-btn {
+  display: inline-block;
+  background-color: #132124;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 13px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #375f68;
+  color: #ffffff;
 }

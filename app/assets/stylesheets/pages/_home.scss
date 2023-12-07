@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435459/background_wyiax1.jpg');
+  background-image: url('https://res.cloudinary.com/dl1yqlzar/image/upload/v1701959172/johny-goerend-U_diPCXCBxU-unsplash_cxzzli.jpg');
   background-size: cover;
   background-position: right;
   background-attachment: fixed;
@@ -49,21 +49,23 @@ body {
 }
 
 .get-started-button {
-  background-color: rgb(5, 130, 30);
-  color: #fff;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #D3615D;
+  color: #ffffff;
+  padding: 10px 50px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-  font-size: 18px;
   text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .get-started-button:hover {
-  background-color: white;
+  background-color: #761f1a;
   text-decoration: none;
-  color: green;
+  color: white;
 }
 
 
@@ -159,4 +161,9 @@ h1 {
   h3{
     font-size: 1rem;
   }
+}
+
+.logo-home {
+  height: 150px;
+  width: 150px;
 }
