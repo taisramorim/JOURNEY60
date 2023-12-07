@@ -137,3 +137,18 @@
   background-color: #375f68;
   color: #ffffff;
 }
+
+.completed-card, .completed-card img {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  z-index: 1;
+}
+.background-image-card{
+  background-image: url("https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435551/logo_gpm6ug.png");
+}
+.background-image-card-linear{
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://res.cloudinary.com/dxrwfnroj/image/upload/v1701435551/logo_gpm6ug.png");
+}
+.completed-status{
+  position: absolute;
+  top: 68px;
+}

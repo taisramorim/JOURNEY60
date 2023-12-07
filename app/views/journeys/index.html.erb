@@ -12,11 +12,11 @@
     <div class="modal fade" id="<%= dom_id(journey) %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content card-border">
-          <div class="model-header d-flex justify-content-end">
+          <div class="model-header d-flex justify-content-end mt-3 mx-3">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <h2><%= journey.title %></h2>
+            <h2 class="mb-3"><%= journey.title %></h2>
           <div class="challenges">
             <% journey.challenges.each do |challenge| %>
             <div class="challenge">
@@ -35,9 +35,14 @@
       <div class="col-6 col-md-4 col-lg-2">
         <div class="journey-card">
           <div class="journey-card-inner">
-            <div class="journey-card-front">
+            <div class="journey-card-front <%= 'completed-card' if journey.challenges.length == completed.length %>" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">
               <img class='journey-image' src="https://res.cloudinary.com/dl1yqlzar/image/upload/v1701888523/The_Journey__7_-removebg-preview_yq9xwd.png" >
-
+              <% if journey.challenges.length == completed.length %>
+                <div class="completed-status">
+                  <p class="mb-0 fs-5 text-center">Completed</p>
+                </div>
+              <% end %>
+              <div class="journey-image <%=journey.challenges.length == completed.length ? "background-image-card-linear" : "background-image-card" %>"> </div>
               <div class="journey-card-title">
                 <%= journey.title %>
               </div>
@@ -63,7 +68,7 @@
 
     cards.forEach(function (card) {
       card.addEventListener("click", function () {
-        card.classList.toggle("is-flipped");
+          card.classList.toggle("is-flipped");
       });
     });
   });
