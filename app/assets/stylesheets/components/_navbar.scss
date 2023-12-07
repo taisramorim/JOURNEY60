@@ -1,16 +1,13 @@
 .navbar-lewagon {
   justify-content: space-between;
   background:  #f7f1e4;
+  height: 77px;
 }
 
 // #b37ec8
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 70px;
 }
 
 .custom-name {
@@ -21,8 +18,8 @@
 }
 
 .avatar {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-link {
@@ -31,4 +28,10 @@
 
 .dropdown-menu {
   background-color: #d9cadf;
+}
+
+.logo {
+  max-height: 275px;
+  width: auto;
+  padding-top: 29px;
 }

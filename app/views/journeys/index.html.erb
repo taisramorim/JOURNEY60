@@ -36,6 +36,7 @@
         <div class="journey-card">
           <div class="journey-card-inner">
             <div class="journey-card-front <%= 'completed-card' if journey.challenges.length == completed.length %>" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">
+              <img class='journey-image' src="https://res.cloudinary.com/dl1yqlzar/image/upload/v1701888523/The_Journey__7_-removebg-preview_yq9xwd.png" >
               <% if journey.challenges.length == completed.length %>
                 <div class="completed-status">
                   <p class="mb-0 fs-5 text-center">Completed</p>

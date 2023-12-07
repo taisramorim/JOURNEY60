@@ -1,5 +1,5 @@
 <div class="container">
- <%= link_to 'Back', journeys_path, class: "btn btn-light rounded"%>
+ <%= link_to 'Back', journeys_path, class: "back-btn" %>
   <div class="card text-white col-lg-8 col-md-7 col-sm-4">
     <h2><%= "#{current_user.first_name} #{current_user.last_name}" %></h2>
     <div class="my-3 mx-auto">
@@ -8,6 +8,6 @@
     <p><strong>Username:</strong> <%= "#{current_user.username}" %> </p>
     <p><strong>Email:</strong> <%= "#{current_user.email}" %> </p>
     <p><strong>Career:</strong> <%= "#{current_user.career}" %> </p>
-    <%= link_to 'Edit Profile', edit_profile_path, class: "btn btn-outline-light btn-sm mx-auto d-block mt-3" %>
+    <%= link_to 'Edit Profile', edit_profile_path, class: "btn mx-auto d-block mt-3" %>
   </div>
 </div>
