@@ -16,6 +16,10 @@
   transform: rotateY(180deg);
 }
 
+.journey-card-reward:hover .journey-card-inner {
+  transform: rotateY(180deg);
+}
+
 .journey-card-front,
 .journey-card-back{
   width: 100%;
@@ -65,6 +69,13 @@
 }
 
 .journey-image{
+  object-fit: contain;
+  max-width: 140%;
+  max-height: fit-content;
+  padding-top: 55px;
+}
+
+.journey-image-reward{
   object-fit: contain;
   max-width: 140%;
   max-height: fit-content;
