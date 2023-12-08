@@ -161,3 +161,21 @@ background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https:/
   padding-top: 55px;
   border-radius: 8px;
 }
+
+.btn-career {
+  background-color: #49547A;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 170px;
+  cursor: pointer;
+}
+
+.btn-career:hover {
+  background-color: #8996c6;
+  color: #ffffff;
+}
