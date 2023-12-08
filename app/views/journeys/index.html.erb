@@ -24,7 +24,7 @@
             <% end %>
             <div>
               <% completed = journey.challenges.select { |challenge| challenge.completed == true } %>
-              <%= link_to 'Reward', reward_path(journey.reward), class: "reward-btn btn btn-success mt-4 reward_journey_#{ journey.id } #{ 'd-none' unless journey.challenges.length == completed.length }" %>
+              <%= link_to 'Reward', reward_path(journey.reward), class: "btn-reward mt-6 mb-6 reward_journey_#{ journey.id } #{ 'd-none' unless journey.challenges.length == completed.length }" %>
             </div>
           </div>
         </div>
