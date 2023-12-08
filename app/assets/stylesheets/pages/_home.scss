@@ -28,7 +28,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin: 15px;
-  background-color: #49547A;
+  background-color: #878ea8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
@@ -66,6 +66,10 @@ body {
   background-color: #e7c19b;
   text-decoration: none;
   color: white;
+}
+
+.button-container {
+  margin-left: 120px;
 }
 
 
@@ -139,8 +143,8 @@ h1 {
 .title-card-one {
   border-radius: 15px;
   padding: 20px;
-  margin: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: 60px;
+  background-color: #49547A;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   align-items: start;
