@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one :profile
   has_one_attached :photo
   after_update :generate_journeys
+
   def generate_journeys
     rewards = Reward.all
     60.times do |i|
@@ -38,7 +39,7 @@ class User < ApplicationRecord
         journey:
       )
 
-      user_options = career.split(", ")
+      user_options = self.career.split(", ")
       user_options.each do |option|
         if option =="Front-End Development"
           Challenge.create!(
