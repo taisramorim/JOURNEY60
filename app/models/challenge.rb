@@ -287,8 +287,6 @@ class Challenge < ApplicationRecord
     "Step outside and spend a few moments observing the world around you. Take note of the colors, sounds, and movements in nature or the urban environment, providing a brief mental escape.",
     "Take a break to discover new music. Listen to a song or artist you haven't heard before, and let yourself enjoy the experience without any specific goal."
   ]
-
-  # 13 fitness
   FITNESS = [
     "Head outdoors, take a little walking or jog to boost cardiovascular health.",
     "Incorporate bodyweight exercises like squats, push-ups, and planks for strength training.",
@@ -304,8 +302,6 @@ class Challenge < ApplicationRecord
     "Take a scenic walk outdoors, exploring different routes to keep things interesting.",
     "Create a cardio circuit at home by combining exercises like jumping jacks, high knees, burpees, and mountain climbers.",
   ]
-
-  # 16 study
   STUDY = [
     "Take a look at POWER BI",
     "Acquire expertise in cloud computing platforms like AWS (Amazon Web Services), Azure, or Google Cloud.",
