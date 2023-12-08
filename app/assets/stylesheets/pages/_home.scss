@@ -185,3 +185,12 @@ h1 {
   height: 150px;
   width: 150px;
 }
+
+.card-user {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  background-color: #00000058;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
