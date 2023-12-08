@@ -4,7 +4,6 @@
     <h3 class="text-center">Here are your daily challenges.</h3>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <% @journeys.each do |journey| %>
@@ -33,9 +32,9 @@
     </div>
   </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="journey-card">
+        <div class="journey-card <%= 'journey-card-not-completed' if journey.challenges.length != completed.length%>">
           <div class="journey-card-inner">
-            <div class="journey-card-front <%= 'completed-card' if journey.challenges.length == completed.length %>" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">
+            <div class="journey-card-front <%= 'completed-card journey-card-inner-gradient' if journey.challenges.length == completed.length %>" data-bs-toggle="modal" data-bs-target="#<%= dom_id(journey) %>">
               <img class='journey-image' src="https://res.cloudinary.com/dl1yqlzar/image/upload/v1701888523/The_Journey__7_-removebg-preview_yq9xwd.png" >
               <% if journey.challenges.length == completed.length %>
                 <div class="completed-status">
@@ -61,11 +60,9 @@
     <% end %>
   </div>
 </div>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var cards = document.querySelectorAll(".journey-card");
-
     cards.forEach(function (card) {
       card.addEventListener("click", function () {
           card.classList.toggle("is-flipped");
